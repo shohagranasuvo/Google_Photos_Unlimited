@@ -53,13 +53,15 @@ Because the modified app is decoupled from official Google Play Services, it nee
    👉 **[Google Photos APK Download (APKMirror)](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/google-photos-7-97-0-1003324405-3-android-apk-download/)**
 
 ### 3️⃣ Step 3: Inject Files & Sign (Using MT Manager)
-1. Open **MT Manager** (or APK Editor).
-2. On one panel, tap your clean `GooglePhotos.apk` and tap **View**.
-3. On the other panel, open the extracted `payload/` directory.
-4. Select `AndroidManifest.xml` and `classes7.dex`, then tap **Add** / **Replace** to overwrite them inside the APK.
-5. In the opened APK, delete the `META-INF/` folder (to strip old signatures).
-6. Exit the APK view, tap the modified APK, and tap **Function** > **Sign**.
-7. Install the newly signed APK!
+1. Download and install **MT Manager**:  
+   👉 **[Download MT Manager (Official Site)](https://mt.cc)** *(or from **[APKMirror](https://www.apkmirror.com/apk/lin-jin-bin/mt-manager/)**)*
+2. Open **MT Manager**.
+3. On the left panel, tap your clean `GooglePhotos.apk` and tap **View**.
+4. On the right panel, open the extracted `payload/` directory.
+5. Select `AndroidManifest.xml` and `classes7.dex`, then tap **Add** / **Replace** to overwrite them inside the APK.
+6. In the opened APK, delete the `META-INF/` folder (to strip old signatures).
+7. Exit the APK view, tap the modified APK, and tap **Function** > **Sign**.
+8. Install the newly signed APK!
 
 ---
 

@@ -80,13 +80,15 @@ No computer and no coding commands needed! You can patch the app directly on you
    👉 **[Google Photos APK Download (APKMirror)](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/google-photos-7-97-0-1003324405-3-android-apk-download/)**
 
 #### 3️⃣ Step 3: Inject & Sign (Using MT Manager)
-1. Open **MT Manager** (or APK Editor).
-2. On one side, tap `GooglePhotos.apk` and tap **View**.
-3. On the other side, open the extracted `payload/` folder.
-4. Select `AndroidManifest.xml` and `classes7.dex`, then tap **Add** / **Replace** to overwrite them into the APK.
-5. Inside the opened APK, delete the `META-INF/` folder to remove the old signature.
-6. Go back, tap the modified APK, and tap **Function** > **Sign** (or enable Auto-sign).
-7. Install the signed APK and enjoy unlimited storage!
+1. Download and install **MT Manager**:  
+   👉 **[Download MT Manager (Official Site)](https://mt.cc)** *(or from **[APKMirror](https://www.apkmirror.com/apk/lin-jin-bin/mt-manager/)**)*
+2. Open **MT Manager**.
+3. On the left panel, tap `GooglePhotos.apk` and tap **View**.
+4. On the right panel, open the extracted `payload/` folder.
+5. Select `AndroidManifest.xml` and `classes7.dex`, then tap **Add** / **Replace** to overwrite them into the APK.
+6. Inside the opened APK, delete the `META-INF/` folder to remove the old signature.
+7. Go back, tap the modified APK, and tap **Function** > **Sign** (or enable Auto-sign).
+8. Install the signed APK and enjoy unlimited storage!
 
 ---
 
