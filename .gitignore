@@ -1,0 +1,42 @@
+# Android and Build Artifacts
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+*.smali
+
+# Keystores, Certificates, and Secrets
+*.keystore
+*.jks
+*.p12
+*.pem
+*.key
+*.pk8
+credentials*.json
+secrets*.json
+.env
+.env.*
+
+# Decompiled Source and Working Copies
+decompiled/
+working_copy/
+original/
+build/
+bin/
+obj/
+
+# Logs and Crash Dumps
+*.log
+*.stackdump
+*.dump
+logcat*.txt
+
+# OS and Editor Metadata
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.bak
+*~
