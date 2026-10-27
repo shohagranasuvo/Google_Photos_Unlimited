@@ -6,7 +6,8 @@
     "dependencies": [],
     "compatiblePackages": {
       "com.google.android.apps.photos": [
-        "7.45.0.807274941"
+        "7.45.0.807274941",
+        "7.97.0.1003324405"
       ]
     },
     "options": []
@@ -18,7 +19,8 @@
     "dependencies": [],
     "compatiblePackages": {
       "com.google.android.apps.photos": [
-        "7.45.0.807274941"
+        "7.45.0.807274941",
+        "7.97.0.1003324405"
       ]
     },
     "options": []
@@ -30,7 +32,8 @@
     "dependencies": [],
     "compatiblePackages": {
       "com.google.android.apps.photos": [
-        "7.45.0.807274941"
+        "7.45.0.807274941",
+        "7.97.0.1003324405"
       ]
     },
     "options": []

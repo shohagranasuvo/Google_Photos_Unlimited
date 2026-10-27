@@ -36,66 +36,80 @@ Below are on-device screenshots taken during verification on a Google Pixel 8, d
 
 ## 3. 🚀 Quick Setup Guide (Choose Your Method)
 
-Choose the method that works best for you:
+Choose the setup method that works best for you:
 
 | Method | Best For | Requirement | Ease |
 | :--- | :--- | :--- | :---: |
-| **[Method 1: Phone-Only (ReVanced Manager)](#-method-1-phone-only-setup-via-revanced-manager-recommended)** | Sideloading directly on your Android phone | Android Phone | ⭐⭐⭐⭐⭐ (Easiest) |
+| **[Method 1: Phone-Only Setup (ReVanced Manager)](#-method-1-phone-only-setup-via-revanced-manager-recommended)** | Sideloading directly on your Android phone | Android Phone | ⭐⭐⭐⭐⭐ (Easiest) |
 | **[Method 2: 1-Click Patch Tool (PC & Termux)](#-method-2-1-click-patch-tool-pc--termux)** | Fast local build on Windows, Mac, Linux, or Termux | Python 3 | ⭐⭐⭐⭐⭐ (Fastest) |
 
 ---
 
 ### 📱 Method 1: Phone-Only Setup via ReVanced Manager (Recommended)
 
-No computer needed! You can patch and install the app in **3 minutes**:
+> [!TIP]
+> **No computer needed!** You can patch and install the app in **3 minutes** directly on your Android phone.
 
-#### Step 1: Install MicroG (Required for Google Login)
+#### 1️⃣ Step 1: Install MicroG (Required for Google Sign-In)
 1. Download and install **MicroG GmsCore** on your phone:  
    👉 **[Download MicroG APK (Direct Link)](https://github.com/ReVanced/GmsCore/releases/latest)**
-2. Open **MicroG Settings** from your app drawer > tap **Account** > sign into your Google Account.
-3. In your phone's **Settings > Apps > MicroG > Battery**, set it to **Unrestricted** (so backups don't pause).
+2. Open **MicroG Settings** from your app drawer:
+   - Tap **Account** > **Add Google Account** and sign in.
+   - Go to phone **Settings > Apps > MicroG > Battery** and set it to **Unrestricted** (so photo backups don't pause).
 
-#### Step 2: Install ReVanced Manager & Add Custom Source
+#### 2️⃣ Step 2: Install ReVanced Manager & Add Custom Source
 1. Download and install **ReVanced Manager**:  
-   👉 **[Download ReVanced Manager APK](https://github.com/ReVanced/revanced-manager/releases/latest)**
-2. *(Optional)* To get our hardened security fixes automatically:
-   - Open ReVanced Manager > tap **Settings (gear icon)** > tap **Sources**.
-   - Change **Patches organization** to: `shohagranasuvo`
-   - Change **Patches source** to: `Google_Photos_Unlimited`
-   - Restart ReVanced Manager.
+   👉 **[Download ReVanced Manager APK (Direct Link)](https://github.com/ReVanced/revanced-manager/releases/latest)**
+2. Open **ReVanced Manager** > tap the **Settings (gear icon)** at the top right or bottom > tap **Sources** (or *Alternative Sources*).
+3. Copy and paste the following values:
+   - **Patches organization**:
+     ```text
+     shohagranasuvo
+     ```
+   - **Patches source**:
+     ```text
+     Google_Photos_Unlimited
+     ```
+4. Close and restart ReVanced Manager so it loads our security-hardened patches!
 
-#### Step 3: Patch Google Photos & Install
-1. Download the supported clean Google Photos APK on your phone:  
-   👉 **[Download Google Photos v7.45 APK (APKMirror)](https://www.apkmirror.com/apk/google-inc/photos/photos-7-45-0-807274941-release/)** *(Choose the standard APK)*.
+#### 3️⃣ Step 3: Download Clean Photos APK & Patch
+1. Download the clean Google Photos APK on your phone:  
+   👉 **[Download Google Photos APK (Working APKMirror Link)](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/)**  
+   *(Make sure to download the **APK** variant, not the "Bundle" variant).*
 2. Open **ReVanced Manager**:
-   - Tap **Patcher** > tap **Select an application** > tap **Storage** (bottom right).
-   - Select the downloaded Google Photos APK.
-3. Tap **Patch** and wait ~1 minute.
+   - Tap **Patcher** at the bottom navigation bar.
+   - Tap **Select an application** > tap **Storage** (in the bottom right corner).
+   - Select the Google Photos APK you just downloaded.
+3. Tap the blue **Patch** button in the bottom right corner and wait ~1 minute.
 4. Tap **Install**!
 
 ---
 
 ### 💻 Method 2: 1-Click Patch Tool (PC & Termux)
 
-If you have a computer or use Termux on Android, you can build the exact security-hardened APK in **5 seconds** with **1 command**:
+If you have a computer (Windows, Mac, Linux) or use Termux on Android, you can build the exact security-hardened APK in **5 seconds** with **1 command**:
 
 1. Download the patch kit from our latest release:  
    👉 **[Download google-photos-unlimited-patch-v7.45.0.zip](https://github.com/shohagranasuvo/Google_Photos_Unlimited/releases/download/v7.45.0-remediated/google-photos-unlimited-patch-v7.45.0.zip)**
 2. Extract the ZIP file on your computer.
-3. Download the clean Google Photos APK from [APKMirror](https://www.apkmirror.com/apk/google-inc/photos/photos-7-45-0-807274941-release/) and place it in the folder as `base.apk`.
-4. Run the script:
+3. Download the clean Google Photos APK from:  
+   👉 **[Google Photos Base APK (Working APKMirror Link)](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/)**  
+   *(Save the file inside the extracted folder as `base.apk`).*
+4. Open terminal in that folder and run:
    ```bash
    python3 patch.py base.apk
    ```
 5. Done! The script automatically injects the security fixes (SEC-01 to SEC-04), 4-byte aligns the ZIP, and signs it as **`GooglePhotos_Unlimited_Remediated.apk`**.
-6. Transfer to your phone and install!
+6. Transfer the APK to your phone and install!
 
 ---
 
 ### 🎉 How to Confirm It Works:
-Open the newly installed **Google Photos** app > tap your profile icon > tap **Manage storage**.  
-You will see the official Pixel banner:  
-**"📱 This Pixel XL can back up unlimited photos & videos at no charge"**
+1. Open your newly installed **Google Photos** app.
+2. Sign in with your Google account via MicroG.
+3. Tap your profile picture at the top right > tap **Manage storage**.
+4. You will see the official Pixel banner:  
+   **"📱 This Pixel XL can back up unlimited photos & videos at no charge"**
 
 ---
 

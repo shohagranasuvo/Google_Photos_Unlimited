@@ -9,7 +9,7 @@ You can link **ReVanced Manager** directly to this repository so it downloads an
 ```mermaid
 flowchart TD
     A["Open ReVanced Manager Settings"] --> B["Tap Sources / Alternative Sources"]
-    B --> C["Enter Organization: shohagranasuvo\nEnter Source: Google_Photos_Unlimited"]
+    B --> C["Enter Organization & Source\n(Copy-Paste Below)"]
     C --> D["Restart ReVanced Manager"]
     D --> E["Patch Google Photos with Custom Hardened Patches!"]
 ```
@@ -21,8 +21,14 @@ flowchart TD
 ### Step 2: Open "Sources" or "Alternative Sources"
 1. Scroll down to the **Sources** (or **Alternative Sources**) section.
 2. You will see configuration fields for **Patches**:
-   - **Patches organization**: Change from `revanced` to `shohagranasuvo`
-   - **Patches source**: Change from `revanced-patches` to `Google_Photos_Unlimited`
+   - **Patches organization**:
+     ```text
+     shohagranasuvo
+     ```
+   - **Patches source**:
+     ```text
+     Google_Photos_Unlimited
+     ```
 3. Tap **OK** / **Save**.
 
 ### Step 3: Restart ReVanced Manager
@@ -31,13 +37,15 @@ flowchart TD
 3. It will now fetch `patches.json` and `patches.rvp` directly from:  
    `https://github.com/shohagranasuvo/Google_Photos_Unlimited/releases/latest`
 
-### Step 4: Patch Google Photos
-1. Tap **Patcher** > select **Google Photos**.
-2. You will now see the custom patches:
+### Step 4: Download Google Photos & Patch
+1. Download clean Google Photos APK:  
+   👉 **[Google Photos APK (Working APKMirror Link)](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/)**
+2. In ReVanced Manager, tap **Patcher** > select **Google Photos** from Storage.
+3. You will now see our custom patches:
    - ✅ **Unlimited Storage & Pixel 1 Spoof**
    - ✅ **Security & Privacy Hardening** (SEC-01 to SEC-04)
    - ✅ **Manage Google Crash Fix**
-3. Tap **Patch** and install!
+4. Tap **Patch** and install!
 
 ---
 

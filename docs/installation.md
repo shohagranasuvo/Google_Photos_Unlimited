@@ -31,21 +31,30 @@ Because the modified app is decoupled from official Google Play Services, it nee
    - Tap **Account** > **Add Google Account** and sign in.
    - Go to phone **Settings > Apps > MicroG > Battery** and set it to **Unrestricted** (so photo backups don't pause).
 
-### 2️⃣ Step 2: Install ReVanced Manager & Configure Sources
+### 2️⃣ Step 2: Install ReVanced Manager & Configure Custom Sources
 1. Download and install **ReVanced Manager** on your phone:  
-   👉 **[Download ReVanced Manager APK](https://github.com/ReVanced/revanced-manager/releases/latest)**
-2. *(Recommended)* Add our custom repository to get all security hardening patches automatically:
+   👉 **[Download ReVanced Manager APK (Direct Link)](https://github.com/ReVanced/revanced-manager/releases/latest)**
+2. To get our hardened security fixes automatically:
    - Open ReVanced Manager > tap **Settings (gear icon)** > tap **Sources** (or *Alternative Sources*).
-   - Change **Patches organization** to: `shohagranasuvo`
-   - Change **Patches source** to: `Google_Photos_Unlimited`
-   - Restart ReVanced Manager.
+   - Copy and paste these exact values:
+     - **Patches organization**:
+       ```text
+       shohagranasuvo
+       ```
+     - **Patches source**:
+       ```text
+       Google_Photos_Unlimited
+       ```
+   - Close and restart ReVanced Manager.
 
 ### 3️⃣ Step 3: Patch Google Photos & Install
 1. Download the supported clean Google Photos APK on your phone:  
-   👉 **[Download Google Photos v7.45 APK (APKMirror)](https://www.apkmirror.com/apk/google-inc/photos/photos-7-45-0-807274941-release/)** *(Select the standard APK)*.
+   👉 **[Download Google Photos APK (Working APKMirror Link)](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/)**  
+   *(Make sure to download the standard **APK** file, not the "Bundle" variant).*
 2. Open **ReVanced Manager**:
-   - Tap **Patcher** at the bottom.
-   - Tap **Select an application** > tap **Storage** (bottom right) > choose the downloaded Google Photos APK.
+   - Tap **Patcher** at the bottom navigation bar.
+   - Tap **Select an application** > tap **Storage** (bottom right).
+   - Select the downloaded Google Photos APK.
 3. Tap the blue **Patch** button (bottom right) and wait ~1 minute.
 4. Tap **Install**!
 
@@ -61,7 +70,9 @@ Download the official patch kit from GitHub Releases:
 
 ### 2️⃣ Step 2: Extract & Add Clean APK
 1. Extract the downloaded ZIP archive.
-2. Download Google Photos v7.45 from [APKMirror](https://www.apkmirror.com/apk/google-inc/photos/photos-7-45-0-807274941-release/) and place it in the extracted folder as `base.apk`.
+2. Download the clean Google Photos APK from:  
+   👉 **[Google Photos Base APK (Working APKMirror Link)](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/)**  
+   *(Save it inside the extracted folder as `base.apk`).*
 
 ### 3️⃣ Step 3: Run the Patcher
 In your terminal (or Command Prompt / PowerShell / Termux), run:
