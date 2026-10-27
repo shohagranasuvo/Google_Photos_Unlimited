@@ -38,17 +38,32 @@ Below are on-device screenshots taken during verification on a Google Pixel 8, d
 
 Choose the setup method that works best for you:
 
-| Method | Best For | Requirement | Ease |
-| :--- | :--- | :--- | :---: |
-| **[Method 1: Phone-Only Setup (ReVanced Manager)](#-method-1-phone-only-setup-via-revanced-manager-recommended)** | Sideloading directly on your Android phone | Android Phone | ⭐⭐⭐⭐⭐ (Easiest) |
-| **[Method 2: 1-Click Patch Tool (PC & Termux)](#-method-2-1-click-patch-tool-pc--termux)** | Fast local build on Windows, Mac, Linux, or Termux | Python 3 | ⭐⭐⭐⭐⭐ (Fastest) |
+| Method | Where It Runs | PC Needed? | Ease |
+| :--- | :--- | :---: | :---: |
+| **[Method 1: ReVanced Manager](#-method-1-phone-only-setup-via-revanced-manager)** | Directly on Android Phone | ❌ No | ⭐⭐⭐⭐⭐ (Easiest UI) |
+| **[Method 2: Termux 1-Click Builder](#-method-2-phone-only-via-termux-1-click-patcher)** | Directly on Android Phone | ❌ No | ⭐⭐⭐⭐⭐ (Fastest on Phone) |
+| **[Method 3: 1-Click Patch Tool on PC](#-method-3-1-click-patch-tool-pc--mac--linux)** | Windows / Mac / Linux |  Yes | ⭐⭐⭐⭐⭐ (Fastest on PC) |
 
 ---
 
-### 📱 Method 1: Phone-Only Setup via ReVanced Manager (Recommended)
+### ⚠️ IMPORTANT: How to Download the Correct Google Photos APK
 
-> [!TIP]
-> **No computer needed!** You can patch and install the app in **3 minutes** directly on your Android phone.
+> [!CAUTION]
+> **DO NOT DOWNLOAD A "BUNDLE" (APKM)!**
+> On APKMirror, you will see two types of files:
+> - ❌ **BUNDLE (APKM)**: ReVanced and patchers **will fail** if you use a bundle.
+> - ✅ **APK (Universal / nodpi)**: Look for the download row with the badge that says **APK**!
+>
+> 👉 **[Download Working Google Photos APK on APKMirror](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/)**  
+> *(Scroll down to "Download", click the row with the green **APK** badge, and download).*
+>
+> *Alternatively, extract the clean APK directly from your own phone using an app like "ML Manager" or "APK Extractor" from Google Play.*
+
+---
+
+### 📱 Method 1: Phone-Only Setup via ReVanced Manager
+
+No computer needed! You can patch and install the app in **3 minutes**:
 
 #### 1️⃣ Step 1: Install MicroG (Required for Google Sign-In)
 1. Download and install **MicroG GmsCore** on your phone:  
@@ -70,37 +85,54 @@ Choose the setup method that works best for you:
      ```text
      Google_Photos_Unlimited
      ```
-4. Close and restart ReVanced Manager so it loads our security-hardened patches!
+4. Close and restart ReVanced Manager.
 
-#### 3️⃣ Step 3: Download Clean Photos APK & Patch
-1. Download the clean Google Photos APK on your phone:  
-   👉 **[Download Google Photos APK (Working APKMirror Link)](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/)**  
-   *(Make sure to download the **APK** variant, not the "Bundle" variant).*
+#### 3️⃣ Step 3: Patch Google Photos & Install
+1. Download the clean Google Photos **APK** (see notice above):  
+   👉 **[Google Photos APK Download](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/)**
 2. Open **ReVanced Manager**:
    - Tap **Patcher** at the bottom navigation bar.
    - Tap **Select an application** > tap **Storage** (in the bottom right corner).
-   - Select the Google Photos APK you just downloaded.
+   - Select the downloaded Google Photos APK.
 3. Tap the blue **Patch** button in the bottom right corner and wait ~1 minute.
 4. Tap **Install**!
 
 ---
 
-### 💻 Method 2: 1-Click Patch Tool (PC & Termux)
+### 📲 Method 2: Phone-Only via Termux (1-Click Patcher)
 
-If you have a computer (Windows, Mac, Linux) or use Termux on Android, you can build the exact security-hardened APK in **5 seconds** with **1 command**:
+If you don't want to use ReVanced Manager, you can build your remediated APK right on your Android phone using **Termux** in 30 seconds:
+
+1. Install **[Termux](https://github.com/termux/termux-app/releases/latest)** on your phone.
+2. Download our patch kit:  
+   👉 **[Download google-photos-unlimited-patch-v7.45.0.zip](https://github.com/shohagranasuvo/Google_Photos_Unlimited/releases/download/v7.45.0-remediated/google-photos-unlimited-patch-v7.45.0.zip)**
+3. Download the clean [Google Photos APK](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/) into your phone's **Downloads** folder and name it `base.apk`.
+4. Open Termux and run these commands:
+   ```bash
+   termux-setup-storage
+   pkg update && pkg install python -y
+   cd ~/storage/downloads
+   unzip google-photos-unlimited-patch-v7.45.0.zip
+   python patch.py base.apk
+   ```
+5. Done! The patched APK **`GooglePhotos_Unlimited_Remediated.apk`** will appear in your Downloads folder. Tap it in your phone's file manager to install!
+
+---
+
+### 💻 Method 3: 1-Click Patch Tool (PC / Mac / Linux)
+
+If you have a computer, you can build the exact security-hardened APK in **5 seconds**:
 
 1. Download the patch kit from our latest release:  
    👉 **[Download google-photos-unlimited-patch-v7.45.0.zip](https://github.com/shohagranasuvo/Google_Photos_Unlimited/releases/download/v7.45.0-remediated/google-photos-unlimited-patch-v7.45.0.zip)**
 2. Extract the ZIP file on your computer.
-3. Download the clean Google Photos APK from:  
-   👉 **[Google Photos Base APK (Working APKMirror Link)](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/)**  
-   *(Save the file inside the extracted folder as `base.apk`).*
-4. Open terminal in that folder and run:
+3. Download clean Google Photos [APK](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/) and place it in the folder as `base.apk`.
+4. Run:
    ```bash
    python3 patch.py base.apk
    ```
-5. Done! The script automatically injects the security fixes (SEC-01 to SEC-04), 4-byte aligns the ZIP, and signs it as **`GooglePhotos_Unlimited_Remediated.apk`**.
-6. Transfer the APK to your phone and install!
+5. Done! The script injects all security fixes, 4-byte aligns, and signs **`GooglePhotos_Unlimited_Remediated.apk`**.
+6. Transfer to your phone and install!
 
 ---
 
