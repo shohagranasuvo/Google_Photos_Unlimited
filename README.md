@@ -68,6 +68,19 @@ You will see:
 
 ---
 
+
+---
+
+### 📦 Alternative Setup Methods (Option B & Option C)
+
+- **Option B: Standalone 1-Click Builder (PC / Termux)**:  
+  Don't want to use ReVanced Manager? Download the [](https://github.com/shohagranasuvo/Google_Photos_Unlimited/releases/latest) patch kit, put your  next to it, and run . It will build, align, and sign your APK in 5 seconds!
+- **Option C: Use this Repo as a Custom ReVanced Source**:  
+  In ReVanced Manager, set your Patch Organization to  and Source to . Read the [Custom Patch Source Guide](docs/custom-patch-source.md).
+
+
+---
+
 ## 4. Privacy-First Statement & Data Safety
 
 > [!IMPORTANT]

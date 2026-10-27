@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Unlimited Storage & Pixel 1 Spoof",
+    "description": "Patches Google Photos to identify as Google Pixel XL (marlin) for unlimited original quality backup, and includes ReVanced GmsCore MicroG support.",
+    "use": true,
+    "dependencies": [],
+    "compatiblePackages": {
+      "com.google.android.apps.photos": [
+        "7.45.0.807274941"
+      ]
+    },
+    "options": []
+  },
+  {
+    "name": "Security & Privacy Hardening",
+    "description": "Enforces TLS encryption (usesCleartextTraffic=false), unexports internal content providers, blocks ADB backup extraction, and suppresses startup debug logs.",
+    "use": true,
+    "dependencies": [],
+    "compatiblePackages": {
+      "com.google.android.apps.photos": [
+        "7.45.0.807274941"
+      ]
+    },
+    "options": []
+  },
+  {
+    "name": "Manage Google Crash Fix",
+    "description": "Catches ActivityNotFoundException when opening account settings and falls back to opening Google Account management in your web browser.",
+    "use": true,
+    "dependencies": [],
+    "compatiblePackages": {
+      "com.google.android.apps.photos": [
+        "7.45.0.807274941"
+      ]
+    },
+    "options": []
+  }
+]

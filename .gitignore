@@ -6,6 +6,10 @@
 *.class
 *.smali
 
+# Release Archives (Hosted in GitHub Releases, not Git tree)
+releases/*.zip
+releases/*.rvp
+
 # Keystores, Certificates, and Secrets
 *.keystore
 *.jks
