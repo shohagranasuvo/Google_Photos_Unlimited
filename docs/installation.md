@@ -8,8 +8,8 @@ This guide walks you through setting up **Unlimited Google Photos Storage & Secu
 
 | Method | Where It Runs | PC Needed? | Ease |
 | :--- | :--- | :---: | :---: |
-| **[Method 1: Phone-Only via ReVanced Manager](#method-1-phone-only-setup-via-revanced-manager)** | Directly on Android Phone | ❌ No | ⭐⭐⭐⭐⭐ (Easiest UI) |
-| **[Method 2: Phone-Only via Termux 1-Click Builder](#method-2-phone-only-via-termux-1-click-patcher)** | Directly on Android Phone | ❌ No | ⭐⭐⭐⭐⭐ (Fastest on Phone) |
+| **[Method 1: MT Manager / APK Editor](#method-1-phone-only-via-mt-manager--apk-editor-no-coding)** | Directly on Android Phone | ❌ No | ⭐⭐⭐⭐⭐ (Easiest GUI, No Coding) |
+| **[Method 2: Phone-Only via Termux 1-Click Builder](#method-2-phone-only-via-termux-1-click-patcher)** | Directly on Android Phone | ❌ No | ⭐⭐⭐⭐ (Fast CLI) |
 | **[Method 3: 1-Click Patch Tool on PC](#method-3-1-click-patch-tool-pc--mac--linux)** | Windows / Mac / Linux |  Yes | ⭐⭐⭐⭐⭐ (Fastest on PC) |
 
 ---
@@ -27,12 +27,12 @@ This guide walks you through setting up **Unlimited Google Photos Storage & Secu
 
 ---
 
-## Method 1: Phone-Only Setup via ReVanced Manager
+## Method 1: Phone-Only via MT Manager / APK Editor (No Coding)
 
 ```mermaid
 flowchart LR
-    A["1️⃣ Download MicroG"] --> B["2️⃣ Install ReVanced Manager"]
-    B --> C["3️⃣ 1-Tap Patch in Manager"]
+    A["1️⃣ Download MicroG"] --> B["2️⃣ Extract Patch Kit"]
+    B --> C["3️⃣ Inject & Sign in MT Manager"]
     C --> D["🎉 Unlimited Backup Ready!"]
 ```
 
@@ -45,37 +45,27 @@ Because the modified app is decoupled from official Google Play Services, it nee
    - Tap **Account** > **Add Google Account** and sign in.
    - Go to phone **Settings > Apps > MicroG > Battery** and set it to **Unrestricted** (so photo backups don't pause).
 
-### 2️⃣ Step 2: Install ReVanced Manager & Configure Custom Sources
-1. Download and install **ReVanced Manager** on your phone:  
-   👉 **[Download ReVanced Manager APK (Direct Link)](https://github.com/ReVanced/revanced-manager/releases/latest)**
-2. To get our hardened security fixes automatically:
-   - Open ReVanced Manager > tap **Settings (gear icon)** > tap **Sources** (or *Alternative Sources*).
-   - Copy and paste these exact values:
-     - **Patches organization**:
-       ```text
-       shohagranasuvo
-       ```
-     - **Patches source**:
-       ```text
-       Google_Photos_Unlimited
-       ```
-   - Close and restart ReVanced Manager.
+### 2️⃣ Step 2: Download the Patch Kit & Clean APK
+1. Download our patch kit and unzip it:  
+   👉 **[Download google-photos-unlimited-patch-v7.45.0.zip](https://github.com/shohagranasuvo/Google_Photos_Unlimited/releases/download/v7.45.0-remediated/google-photos-unlimited-patch-v7.45.0.zip)**  
+   *(Inside you will find the `payload/` folder containing `AndroidManifest.xml` and `classes7.dex`).*
+2. Download the clean Google Photos **APK** (ensure it is the APK row, not Bundle):  
+   👉 **[Google Photos APK Download (APKMirror)](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/google-photos-7-97-0-1003324405-3-android-apk-download/)**
 
-### 3️⃣ Step 3: Patch Google Photos & Install
-1. Download the clean Google Photos **APK** (ensure it is the APK row, not Bundle):  
-   👉 **[Google Photos APK Download](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/)**
-2. Open **ReVanced Manager**:
-   - Tap **Patcher** at the bottom navigation bar.
-   - Tap **Select an application** > tap **Storage** (bottom right).
-   - Select the downloaded Google Photos APK.
-3. Tap the blue **Patch** button (bottom right) and wait ~1 minute.
-4. Tap **Install**!
+### 3️⃣ Step 3: Inject Files & Sign (Using MT Manager)
+1. Open **MT Manager** (or APK Editor).
+2. On one panel, tap your clean `GooglePhotos.apk` and tap **View**.
+3. On the other panel, open the extracted `payload/` directory.
+4. Select `AndroidManifest.xml` and `classes7.dex`, then tap **Add** / **Replace** to overwrite them inside the APK.
+5. In the opened APK, delete the `META-INF/` folder (to strip old signatures).
+6. Exit the APK view, tap the modified APK, and tap **Function** > **Sign**.
+7. Install the newly signed APK!
 
 ---
 
 ## Method 2: Phone-Only via Termux (1-Click Patcher)
 
-If you don't want to use ReVanced Manager, you can build your remediated APK right on your Android phone using **Termux** in 30 seconds:
+If you prefer using a terminal command on your phone, you can build your remediated APK using **Termux** in 30 seconds:
 
 1. Install **[Termux](https://github.com/termux/termux-app/releases/latest)** on your phone.
 2. Download our patch kit:  
