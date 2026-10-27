@@ -34,48 +34,37 @@ Below are on-device screenshots taken during verification on a Google Pixel 8, d
 
 ---
 
-## 3. Quick Setup Guide (Step-by-Step for Users)
+## 3. 📱 Easy 3-Step Setup (No Computer Needed)
 
-Follow these simple steps to set up the application on your Android device:
+You can set up Unlimited Google Photos directly on your phone in **under 3 minutes**:
 
-```mermaid
-flowchart LR
-    A["Step 1: Install MicroG"] --> B["Step 2: Obtain Base Photos APK"]
-    B --> C["Step 3: Patch with ReVanced Manager"]
-    C --> D["Step 4: Sign In & Backup"]
-```
 
-### Step 1: Install MicroG (Required for Account Sign-In)
-Because the modified app is decoupled from official Google Play Services, it needs MicroG to log into your Google Account:
-1. Download **ReVanced GmsCore** (`app.revanced.android.gms`) from the official release page:
-   👉 **[ReVanced GmsCore Releases](https://github.com/ReVanced/GmsCore/releases)**
-2. Install the GmsCore APK on your phone.
-3. Open **MicroG Settings** from your app drawer > Tap **Account** > Add your Google Account.
-4. Set Battery usage for MicroG to **Unrestricted** in Android Settings so background backups are not killed.
 
-### Step 2: Obtain the Clean Base Google Photos APK
-1. Download the target Google Photos APK (Version `7.45.0.807274941` or recommended version in ReVanced) from a trusted APK archive (such as APKMirror) or extract it from your device using ADB:
-   ```bash
-   adb shell pm path com.google.android.apps.photos
-   adb pull <path-from-above> base.apk
-   ```
+### 1️⃣ Step 1: Install MicroG (For Google Sign-In)
+1. Download and install **MicroG GmsCore** on your phone:  
+   👉 **[Download MicroG APK](https://github.com/ReVanced/GmsCore/releases/latest)**
+2. Open **MicroG Settings** from your app drawer > tap **Account** > log into your Google Account.
+3. In your phone's **Settings > Apps > MicroG > Battery**, set it to **Unrestricted** (so photo backups don't pause).
 
-### Step 3: Patch Locally Using ReVanced Manager (Easiest Method)
-1. Download and install **ReVanced Manager** from the official site:
-   👉 **[ReVanced Manager](https://github.com/ReVanced/revanced-manager/releases)**
-2. Open ReVanced Manager > Tap **Patcher**.
-3. Select **Google Photos** (choose the downloaded base APK from storage).
-4. Ensure the following patches are enabled:
-   - `GmsCore Support` (enables MicroG login)
-   - `Spoof device` / `Unlimited storage` (spoofs Pixel 1 identity)
-5. Tap **Patch** and wait 1–2 minutes.
-6. Tap **Install** or save the exported APK as `Photos.apk`.
+### 2️⃣ Step 2: Install ReVanced Manager
+1. Download and install **ReVanced Manager** on your phone:  
+   👉 **[Download ReVanced Manager APK](https://github.com/ReVanced/revanced-manager/releases/latest)**
 
-### Step 4: Verify and Start Using
-1. Open the patched **Google Photos** app.
-2. Sign in with your Google account via MicroG.
-3. Tap your profile picture > tap **Manage storage**.
-4. Confirm that the banner reads: *"This Pixel XL can back up unlimited photos & videos at no charge"*.
+### 3️⃣ Step 3: Patch Google Photos (1-Tap Automatic Setup)
+1. Download the supported clean Google Photos APK on your phone:  
+   👉 **[Download Google Photos v7.45 APK (APKMirror)](https://www.apkmirror.com/apk/google-inc/photos/photos-7-45-0-807274941-release/)** *(Select the standard APK)*.
+2. Open **ReVanced Manager**:
+   - Tap **Patcher** at the bottom.
+   - Tap **Select an application** > tap **Storage** (bottom right) > choose the downloaded Google Photos APK.
+3. Tap **Patch** (bottom right) and wait ~1 minute.
+4. Tap **Install**!
+
+### 🎉 Verification
+Open the newly installed **Google Photos** > tap your profile icon > tap **Manage storage**.  
+You will see:  
+**"📱 This Pixel XL can back up unlimited photos & videos at no charge"**
+
+*(Need a more detailed guide? Read [docs/installation.md](docs/installation.md)).*
 
 ---
 

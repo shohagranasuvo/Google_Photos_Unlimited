@@ -1,104 +1,100 @@
-# Installation and Sideloading Guide
+# 📱 Easy Setup & Installation Guide (No PC Needed)
 
-This guide provides secure, step-by-step instructions for sideloading and verifying a locally built `app.revanced.android.photos` APK.
-
----
-
-## 1. Verified Compatibility
-
-- **Verified Target OS**: Android 14, Android 15, and Android 17 (Developer Preview / Vanilla Ice Cream / Baklava).
-- **Minimum Supported SDK**: Android 6.0 (API Level 23).
-- **Target Architecture**: `arm64-v8a`.
-- **Companion Requirement**: MicroG GmsCore (`app.revanced.android.gms`) is required for account authentication.
+Get **Unlimited Google Photos Storage** on your Android phone in **3 simple steps**. You do **not** need a computer, root access, or technical skills!
 
 ---
 
-## 2. Pre-Installation Integrity & Signature Verification
+## ⚡ Quick 3-Step Phone Setup (Takes 3 Minutes)
 
-Never install an APK without verifying its cryptographic digest and package identity.
-
-### Step 1: Check SHA-256 Hash
-In a Linux/macOS terminal or Git Bash on Windows:
-```bash
-sha256sum path/to/revanced_photos.apk
-```
-Confirm the digest matches your expected build output.
-
-### Step 2: Inspect Package Name and Certificate
-Using `apksigner` (from Android SDK Build-Tools):
-```bash
-apksigner verify --verbose --print-certs path/to/revanced_photos.apk
-```
-Ensure:
-1. `Verifies: true`
-2. The package name is `app.revanced.android.photos`.
-3. The certificate fingerprint matches your local signing keystore.
-
-> [!CAUTION]
-> If you previously installed a different build with a different signing key, Android's Package Manager will abort the installation with `INSTALL_FAILED_UPDATE_INCOMPATIBLE`. Android strictly enforces that updates share the exact same cryptographic signing key as the installed package.
-
----
-
-## 3. Safe Installation Procedure
-
-### Option A: Installation via ADB (Recommended for Researchers)
-Using Android Debug Bridge (ADB) via USB:
-```bash
-# Sideload the APK directly onto your device
-adb install -r path/to/revanced_photos.apk
-```
-
-If upgrading an existing installation:
-```bash
-adb install -r -d path/to/revanced_photos.apk
-```
-
-### Option B: On-Device Installation via Android Package Installer
-If transferring the file directly to your phone:
-
-1. **Copy the APK** to your phone's internal storage via USB or local file sharing.
-2. **Grant One-Time Sideloading Permission**:
-   - Open your device's **Files** app.
-   - Tap the APK file.
-   - When prompted with *"For your security, your phone is not allowed to install unknown apps from this source"*, tap **Settings**.
-   - Enable **Allow from this source**.
-3. **Install**:
-   - Tap **Install** on the system confirmation dialog.
-4. **Revoke Sideloading Permission Immediately**:
-   - Once installation finishes, immediately go to:
-     `Settings > Apps > Special app access > Install unknown apps`
-   - Select the file manager/browser you used and turn **Allow from this source** back **OFF**.
-   - *Never leave global sideload permissions permanently enabled.*
-
----
-
-## 4. Post-Installation Verification
-
-Confirm that the application installed correctly and adheres to sandbox constraints:
-
-```bash
-# Query package status and version
-adb shell dumpsys package app.revanced.android.photos | grep -E "versionName|versionCode|flags"
-```
-
-Verify that internal content providers are not accessible to external applications:
-```bash
-adb shell content query --uri content://app.revanced.android.photos.freeable_space
-# Expected response: java.lang.SecurityException
+```mermaid
+flowchart TD
+    Step1["1️⃣ Install MicroG\n(For Google Login)"] --> Step2["2️⃣ Install ReVanced Manager"]
+    Step2 --> Step3["3️⃣ Download & Patch Photos\n(Tap 1 Button)"]
+    Step3 --> Done["🎉 Open Photos & Enjoy Unlimited Backup!"]
 ```
 
 ---
 
-## 5. Uninstallation and Local Data Preservation
+### Step 1: Install MicroG (For Google Sign-In)
 
-To uninstall the application:
-- On your phone: Long-press the **Photos** app icon > Tap **App info** > Tap **Uninstall**.
-- Or via ADB:
-  ```bash
-  adb uninstall app.revanced.android.photos
-  ```
+Because this app works without root, it uses **MicroG** to securely log into your Google Account.
 
-### What Happens to Your Media:
-- **Local Photos on Device Storage**: Any camera pictures and video files residing in `/sdcard/DCIM/Camera` or other public storage folders **remain completely untouched and safe**. Sideloaded apps do not delete your device media when uninstalled.
-- **App-Private Data**: Cached thumbnails, search indexes, and in-app draft edits located in `/data/user/0/app.revanced.android.photos/` will be deleted by the Android OS.
-- **Cloud Media**: Photos already synced to your Google Account remain stored in your Google cloud library.
+1. On your phone, tap this link to download the latest MicroG:  
+   👉 **[Download MicroG APK (Direct Link)](https://github.com/ReVanced/GmsCore/releases/latest)**
+2. Tap the downloaded file in your browser or **Downloads** folder to install it.  
+   *(If prompted "Allow from this source", tap **Settings** and turn it **ON**).*
+3. Open **MicroG Settings** from your app drawer:
+   - Tap **Account** > **Add Google Account**.
+   - Log into your Google Account.
+   - Go to phone **Settings > Apps > MicroG > Battery** and select **Unrestricted** (so backups run in the background).
+
+---
+
+### Step 2: Install ReVanced Manager
+
+ReVanced Manager patches the app automatically on your phone with one tap.
+
+1. Download the official ReVanced Manager:  
+   👉 **[Download ReVanced Manager APK](https://github.com/ReVanced/revanced-manager/releases/latest)**
+2. Tap the file to install it.
+
+---
+
+### Step 3: Patch Google Photos (1-Tap Setup)
+
+1. Download the recommended clean Google Photos APK to your phone:  
+   👉 **[Download Google Photos v7.45 APK (APKMirror)](https://www.apkmirror.com/apk/google-inc/photos/photos-7-45-0-807274941-release/)**  
+   *(Choose the "APK" version, not "Bundle").*
+2. Open **ReVanced Manager**:
+   - Tap **Patcher** at the bottom.
+   - Tap **Select an application** > tap **Storage** (bottom right).
+   - Select the Google Photos APK you just downloaded.
+3. Tap the blue **Patch** button in the bottom right corner.
+4. Wait 1–2 minutes while it automatically adds unlimited backup and MicroG login.
+5. Tap **Install** when it finishes!
+
+---
+
+### 🎉 All Done! How to Verify Unlimited Storage:
+
+1. Open your newly installed **Google Photos** app.
+2. Sign in with your Google account.
+3. Tap your **Profile icon** at the top right > tap **Manage storage**.
+4. You will see the official Pixel banner:  
+   **"📱 This Pixel XL can back up unlimited photos & videos at no charge"**
+
+---
+
+## 💡 Simple Tips & Troubleshooting
+
+- **"App not installed" error?**  
+  If you have an older modded Photos app installed, uninstall it first, then install the new one. *(Your local photos on your phone will NOT be deleted).*
+- **"Manage Google Account" button crashes?**  
+  This is a known cosmetic bug. To manage your Google account settings, simply visit [myaccount.google.com](https://myaccount.google.com) in Chrome.
+- **Photos not backing up automatically?**  
+  Go to your phone's **Settings > Apps > Google Photos > Battery** and set it to **Unrestricted**.
+
+---
+
+<details>
+<summary>🛠️ <b>Advanced Method: Install via PC & ADB (For Developers / Researchers)</b></summary>
+
+### Pre-Installation Verification
+```bash
+# Check SHA-256 hash
+sha256sum path/to/Photos.apk
+
+# Verify cryptographic signature
+apksigner verify --verbose --print-certs path/to/Photos.apk
+```
+
+### Install via USB Debugging
+```bash
+# Sideload APK directly
+adb install -r path/to/Photos.apk
+
+# Check sandbox status
+adb shell dumpsys package app.revanced.android.photos | grep -E "versionName|flags"
+```
+
+</details>
