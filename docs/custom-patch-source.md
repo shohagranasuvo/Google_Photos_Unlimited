@@ -39,7 +39,7 @@ flowchart TD
 
 ### Step 4: Download Google Photos & Patch
 1. Download clean Google Photos APK:  
-   👉 **[Google Photos APK (Working APKMirror Link)](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/)**
+   👉 **[Google Photos APK (Working APKMirror Link)](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-45-0-807274941-release/)**
 2. In ReVanced Manager, tap **Patcher** > select **Google Photos** from Storage.
 3. You will now see our custom patches:
    - ✅ **Unlimited Storage & Pixel 1 Spoof**

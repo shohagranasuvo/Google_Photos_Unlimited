@@ -60,7 +60,7 @@ Because the modified app is decoupled from official Google Play Services, it nee
 > [!CAUTION]
 > **DO NOT DOWNLOAD A "BUNDLE" (APKM)!**
 > On APKMirror, look for the download row with the green **APK** badge:
-> 👉 **[Download Working Google Photos APK on APKMirror](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/google-photos-7-97-0-1003324405-3-android-apk-download/)**  
+> 👉 **[Download Working Google Photos APK on APKMirror](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-45-0-807274941-release/)**  
 > *(Scroll down to "Download", click the row with the green **APK** badge, and download).*
 
 ---
@@ -72,7 +72,7 @@ If you have a computer, you can build the exact security-hardened APK in **5 sec
 1. Download the patch kit from our latest release:  
    👉 **[Download google-photos-unlimited-patch-v7.45.0.zip](https://github.com/shohagranasuvo/Google_Photos_Unlimited/releases/download/v7.45.0-remediated/google-photos-unlimited-patch-v7.45.0.zip)**
 2. Extract the ZIP file on your computer.
-3. Download the clean Google Photos [APK](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/google-photos-7-97-0-1003324405-3-android-apk-download/) and place it in the folder as `base.apk`.
+3. Download the clean Google Photos [APK](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-45-0-807274941-release/) and place it in the folder as `base.apk`.
 4. Run:
    ```bash
    python3 patch.py base.apk
@@ -90,7 +90,7 @@ No computer and no coding commands needed! You can patch the app directly on you
    👉 **[Download google-photos-unlimited-patch-v7.45.0.zip](https://github.com/shohagranasuvo/Google_Photos_Unlimited/releases/download/v7.45.0-remediated/google-photos-unlimited-patch-v7.45.0.zip)**  
    *(Inside you will find the `payload/` folder with `AndroidManifest.xml` and `classes7.dex`).*
 2. Download clean Google Photos **APK**:  
-   👉 **[Google Photos APK Download (APKMirror)](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/google-photos-7-97-0-1003324405-3-android-apk-download/)**
+   👉 **[Google Photos APK Download (APKMirror)](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-45-0-807274941-release/)**
 3. Download and install **MT Manager**:  
    👉 **[Download MT Manager (Official Site)](https://mt.cc)** *(or from **[APKMirror](https://www.apkmirror.com/apk/lin-jin-bin/mt-manager/)**)*
 4. Open **MT Manager**:
@@ -110,7 +110,7 @@ If you prefer a terminal command on your phone, you can build your remediated AP
 1. Install **[Termux](https://github.com/termux/termux-app/releases/latest)** on your phone.
 2. Download our patch kit:  
    👉 **[Download google-photos-unlimited-patch-v7.45.0.zip](https://github.com/shohagranasuvo/Google_Photos_Unlimited/releases/download/v7.45.0-remediated/google-photos-unlimited-patch-v7.45.0.zip)**
-3. Download the clean [Google Photos APK](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-97-0-1003324405-release/google-photos-7-97-0-1003324405-3-android-apk-download/) into your phone's **Downloads** folder and name it `base.apk`.
+3. Download the clean [Google Photos APK](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-45-0-807274941-release/) into your phone's **Downloads** folder and name it `base.apk`.
 4. Open Termux and run these commands:
    ```bash
    termux-setup-storage
