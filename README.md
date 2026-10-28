@@ -203,6 +203,7 @@ Read more in [**docs/limitations.md**](docs/limitations.md).
 
 ## 8. Repository Navigation
 
+- [**patches/**](patches/) — Open-source patch files, Java/Smali source code, and security diffs.
 - [**SECURITY.md**](SECURITY.md) — Responsible disclosure policy and reporting guidelines.
 - [**PRIVACY.md**](PRIVACY.md) — Privacy disclosures, data flow mapping, and telemetry analysis.
 - [**CHANGELOG.md**](CHANGELOG.md) — Version history and remediation logs.
