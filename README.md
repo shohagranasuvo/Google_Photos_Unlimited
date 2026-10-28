@@ -46,7 +46,7 @@ Choose the setup method that works best for you:
 
 ---
 
-### ⚠️ IMPORTANT: Prerequisites (MicroG & Clean APK)
+### ⚠️ IMPORTANT: Prerequisites (MicroG & Correct Version)
 
 #### 1️⃣ Install MicroG (Required for Google Sign-In)
 Because the modified app is decoupled from official Google Play Services, it needs MicroG to log into your Google Account:
@@ -56,12 +56,18 @@ Because the modified app is decoupled from official Google Play Services, it nee
    - Tap **Account** > **Add Google Account** and sign in.
    - Go to phone **Settings > Apps > MicroG > Battery** and set it to **Unrestricted** (so photo backups don't pause).
 
-#### 2️⃣ Download the Clean Google Photos APK
+#### 2️⃣ Download Google Photos APK (Version 7.45.0.807274941 ONLY)
 > [!CAUTION]
-> **DO NOT DOWNLOAD A "BUNDLE" (APKM)!**
-> On APKMirror, look for the download row with the green **APK** badge:
-> 👉 **[Download Working Google Photos APK on APKMirror](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-45-0-807274941-release/)**  
-> *(Scroll down to "Download", click the row with the green **APK** badge, and download).*
+> **EXACT VERSION REQUIREMENT & NO BUNDLES:**
+> - ✅ **Must be version 7.45.0.807274941**: The patch payload is specifically compiled for this release. Using newer versions (e.g., 7.97+) will cause installation failures and crashes due to mismatched class definitions.
+> - ❌ **DO NOT DOWNLOAD A "BUNDLE" (APKM)**: Look for the download row with the green **APK** badge!
+>
+> 👉 **[Download Working Google Photos 7.45.0 APK on APKMirror](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-45-0-807274941-release/)**  
+> *(Scroll down to "All variants", click the row with the green **APK** badge, and download).*
+
+> [!NOTE]
+> **Coexistence with Factory Google Photos:**  
+> The patched app uses the package name `app.revanced.android.photos`, so it installs **alongside** your phone's factory Google Photos without overwriting it. Your existing device photos are 100% safe. You can disable the factory Photos app or turn off its notifications to avoid duplicate prompts.
 
 ---
 

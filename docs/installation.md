@@ -17,13 +17,16 @@ This guide walks you through setting up **Unlimited Google Photos Storage & Secu
 ## ⚠️ Important: Choosing the Correct APK (Avoid Bundles!)
 
 > [!CAUTION]
-> **DO NOT DOWNLOAD A "BUNDLE" (APKM)!**
-> On APKMirror, there are two types of files:
-> - ❌ **BUNDLE (APKM)**: Split packages that ReVanced and patch tools cannot patch.
-> - ✅ **APK (Universal / nodpi)**: A standalone single package.
+> **EXACT VERSION REQUIREMENT & NO BUNDLES:**
+> - ✅ **Must be version 7.45.0.807274941**: The patch payload is specifically compiled for this release. Using newer versions (e.g., 7.97+) will cause installation failures and crashes due to mismatched class definitions.
+> - ❌ **DO NOT DOWNLOAD A "BUNDLE" (APKM)**: Look for the download row with the green **APK** badge!
 >
-> 👉 **[Download Working Google Photos APK on APKMirror](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-45-0-807274941-release/)**  
-> *(Scroll down to "Download", look for the row with the green **APK** badge, and download).*
+> 👉 **[Download Working Google Photos 7.45.0 APK on APKMirror](https://www.apkmirror.com/apk/google-inc/photos/google-photos-7-45-0-807274941-release/)**  
+> *(Scroll down to "All variants", click the row with the green **APK** badge, and download).*
+
+> [!NOTE]
+> **Coexistence with Factory Google Photos:**  
+> The patched app uses the package name `app.revanced.android.photos`, so it installs **alongside** your phone's factory Google Photos without overwriting it. Your existing device photos are 100% safe. You can disable the factory Photos app or turn off its notifications to avoid duplicate prompts.
 
 ---
 
